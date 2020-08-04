@@ -40,8 +40,8 @@ function displayEmployees(employeeData) {
 };
 
 function displayModal(index) {
-  // use object destructuring make our template literal cleaner
-  let { name, dob, phone, email, location: { city, street, state, postcode
+  // use object destructuring to make our template literal cleaner
+  let { name, dob, phone, email, location: { street, city, state, postcode
   }, picture } = employees[index];
   let date = new Date(dob.date);
   const modalHTML = `
@@ -52,7 +52,7 @@ function displayModal(index) {
     <p class="address">${city}</p>
     <hr />
     <p>${phone}</p>
-    <p class="address">${street}, ${state} ${postcode}</p>
+    <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
     <p>Birthday:
     ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
