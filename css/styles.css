@@ -1,0 +1,50 @@
+nav {
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+}
+main {
+  display: grid;
+}
+main > div {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.flex {
+  display: flex;
+}
+
+/* .flex div {
+  justify-content: left;
+} */
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  h1,
+  input {
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+  h1,
+  input {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  h1 {
+    margin-left: 1em;
+  }
+  input {
+    margin-right: 1em;
+    height: 40%;
+  }  
+} 
